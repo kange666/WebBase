@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    //创建对象
+    var str = "Aaaa";
+    document.write(str);
+    document.write("<hr/>");
+    //bold()方法：加粗
+    document.write(str.bold());
+    document.write("<hr/>");
+    //fontcolor方法：设置字符串颜色
+    document.write(str.fontcolor("red"));
+    document.write("<hr/>");
+    //fontsize方法：设置字体大小
+    document.write(str.fontsize("5"));
+    document.write("<hr/>");
+    //link：将字符串设置成链接
+    document.write(str.link("hello.html"));
+    document.write("<hr/>");
+    //sub和sup：下标和上标
+    var a = "10";
+    var b = "20";
+    document.write(str);
+    document.write(a.sub());
+    document.write(b.sup());
+    document.write("<hr/>");
+    //concat字符串拼接
+    var aa = "asd";
+    var bb = "das";
+    document.write(aa.concat(bb));
+    document.write("<hr/>");
+    //charAt返回指定位置的字符串
+    var str1 = "abcdef";
+    document.write(str1.charAt(0));
+    document.write("<hr/>");
+    //indexOf:返回字符串位置
+    var str2 = "abcdefg";
+    document.write(str2.indexOf(c));
+    document.write("<hr/>");
+    //split:切分字符串
+    var str3 = "a-b-c-d";
+    var arr1 = str3.split("-");
+    document.write("length:"+arr1.length);
+    //replace替换字符串
+    document.write("<hr/>");
+    var str4 = "abcd";
+    document.write(str4.replace("a","A"));
+    document.write(str4);
+
+
+</script>
+</body>
+</html>

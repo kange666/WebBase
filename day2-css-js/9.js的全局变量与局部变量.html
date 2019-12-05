@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--全局变量-->
+<script type="text/javascript">
+    var aa = 10;
+    alert("在方法外部调用aa"+aa);
+    //定义一个方法
+    function test(){
+        alert("在方法内部调用aa"+aa);
+    }
+    test();
+
+</script>
+
+<script type="text/javascript">
+    alert("在另一个script内调用aa"+aa);
+</script>
+<!--局部变量-->
+<script type="text/javascript">
+    function test1(){
+        var nn = 30;
+        alert(nn);
+    }
+    test1();
+    alert(nn);
+</script>
+</body>
+</html>

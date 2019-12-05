@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //eval():执行js代码
+        var str = "alert('1234')";
+        eval(str);
+        document.write("<hr/>");
+        //encodeURI();对字符进行编码
+        var str1 = "测试中文aaa1234";
+        var encode1 = encodeURI(str1);
+        document.write(encode1);
+        document.write("<br/>");
+        //decodeURI:解码
+        var decode2 = decodeURI(encode1);
+        document.write(decode2);
+        document.write("<hr/>");
+        //isNaN:判断当前字符串是否是数字，返回true or false
+        var str2 = "123";
+        alert(isNaN(str2));
+        //parseInt:类型转换，，字符串=数字
+        var str3 = "123";
+        document.write(parseInt(str3)+1);
+
+    </script>
+</body>
+</html>

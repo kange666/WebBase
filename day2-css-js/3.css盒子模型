@@ -1,0 +1,37 @@
+在布局前将数据封装到一块一块的区域内
+1.边框
+  border：宽度 类型 颜色
+  border: 2px  solid blue;
+  border:统一设置
+  border-top
+  border-bottom
+  border-left
+  border-right
+
+2.内边距
+    padding: 距离
+    padding: 20px;
+
+3.外边距
+    margin:距离
+    margin:30px
+
+
+css布局漂浮
+float:left;
+
+css布局的定位
+position：
+         属性值：
+                    -absolute：
+                        对象从文本流中脱离出来
+                        可以用top，bottom进行定位
+
+                    -relative：
+                        不把对象拖出
+                        可以top等定位
+
+
+position:absolute;
+          top:40px;
+          left:40px;

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+行：<input type="text" id="h"/>
+列：<input type="text" id="l"/>
+<br/>
+<input type="button" value="生成" onclick="add();"/>
+<div id="div">
+
+</div>
+<script type="text/javascript">
+    function  add(){
+        //获得输入的行列
+        var h = document.getElementById("h").value;
+        var l = document.getElementById("l").value;
+        //吧表格的代码放到一个变量里
+        var tab = "<table border='1' bordercolor" +
+                " = 'blue'>";
+        //循环行
+        for(var i=1;i<=h;i++){
+            //循环单元格
+            tab += "<tr>";
+            for(var j =1;j<=l;j++){
+                tab +="<td>aaaa</td>";
+            }
+
+            tab += "</tr>";
+        }
+
+        tab += "</table>";
+
+        //alert(tab);
+        //获得div
+        var div = document.getElementById("div");
+        //把表格放到div
+        div.innerHTML = tab;
+    }
+
+
+</script>
+</body>
+</html>

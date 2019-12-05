@@ -1,0 +1,18 @@
+关联选择器：
+<div><p>aaaaaaaaa</p></div>
+div p {
+}
+
+组合选择器：
+<div></div>
+<p></p>
+div,p{
+
+}
+
+
+伪元素选择器：
+原状态：:link
+悬停：:hover
+点击：:active
+点击后：:visited

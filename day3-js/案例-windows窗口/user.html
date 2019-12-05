@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" align="center">
+    <tr>
+        <td>编号</td>
+        <td>姓名</td>
+        <td>操作</td>
+    </tr>
+    <tr>
+        <td>01</td>
+        <td>LZSK</td>
+        <td><input type="button" value="选择" onclick="s1('01','LZSK');"/></td>
+    </tr>
+    <tr>
+        <td>02</td>
+        <td>LJP</td>
+        <td><input type="button" value="选择" onclick="s1('02','LJP');"/></td>
+    </tr>
+    <tr>
+        <td>03</td>
+        <td>ZC</td>
+        <td><input type="button" value="选择" onclick="s1('03','ZC');"/></td>
+    </tr>
+
+<script type="text/javascript">
+    //实现s1方法
+    function s1(num1,name1){
+        //需要把num1，name1赋值到windows界面
+        //跨页面操作 opener得到创建这个窗口的窗口windows
+        var win = window.opener;//得到windows界面
+        win.document.getElementById("numid").value = num1;
+        win.document.getElementById("nameid").value = name1;
+        window.close();
+    }
+
+
+</script>
+
+
+</table>
+
+</body>
+</html>

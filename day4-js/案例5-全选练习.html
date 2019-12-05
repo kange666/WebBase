@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="checkbox" id="id" onclick="AN()">全选/全不选<br/>
+<input type="checkbox" name="love" />篮球
+<input type="checkbox" name="love" />乒乓球
+<input type="checkbox" name="love" />羽毛球
+<input type="checkbox" name="love" />排球
+<br/>
+<input type="button" value="全选" onclick="All();"/>
+<input type="button" value="全不选" onclick="no();"/>
+<input type="button" value="反选" onclick="other();"/>
+
+<script type="text/javascript">
+
+    //实现全选操作
+    function All() {
+        //获取要操作的复选框
+        var loves = document.getElementsByName("love");
+        //遍历数组，得到每一个复选框
+        for (var i = 0; i < loves.length; i++) {
+            var love1 = loves[i];//得到每一个复选框
+
+            //设置属性为true
+            love1.checked = true;
+
+        }
+    }
+        //实现全不选操作
+        function no(){
+
+            var loves = document.getElementsByName("love");
+            for(var j=0;j<loves.length;j++){
+                var love1 = loves[j];
+                love1.checked = false;
+            }
+
+    }
+    //反选
+    function other(){
+       var loves = document.getElementsByName("love");
+        for(var a = 0;a<loves.length;a++){
+            var love1 = loves[a];
+            //判断
+            if(love1.checked == true){
+                love1.checked = false;
+            }else{
+                love1.checked = true;
+            }
+        }
+    }
+    //全选/全不选
+    function AN(){
+        var box = document.getElementById("id");
+        if(box.checked == true){
+            All();
+        }else {
+            no();
+        }
+
+    }
+
+</script>
+</body>
+</html>

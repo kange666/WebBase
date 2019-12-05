@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    //获取当前时间
+    var date = new Date();
+    document.write(date);//Tue Sep 11 2018 22:14:23 GMT+0800
+    //转换成习惯的格式
+    document.write("<hr/>");
+    document.write(date.toLocaleString());//2018/9/11 下午10:16:18
+    //得到当前年
+    document.write("<hr/>");
+    document.write("year:"+date.getFullYear());
+    //获取当前月
+    document.write("<hr/>");
+    var date1 = date.getMonth()+1;
+    document.write("month:"+date1);
+    //得到当前星期,星期日为0
+    document.write("<hr/>");
+    document.write("day:"+date.getDay());
+    //得到当前日
+    getDate();
+    //获取当前小时
+    getHours();
+    //得到当前分钟/秒
+    getMinutes();getSeconds();
+
+
+
+</script>
+</body>
+</html>

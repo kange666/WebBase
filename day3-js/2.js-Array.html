@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    //concat:数组连接
+    var arr = [1,2,3];
+    var arr1= [4,5,6];
+    document.write(arr.concat(arr1));
+    document.write("<hr/>");
+    //join：根据指定的字符分割数组
+    var arr2 = new Array(3);
+    arr2 [0] = "a";
+    arr2 [1] = "b";
+    arr2 [2] = "c";
+    document.write(arr2);
+    document.write("<hr/>");
+    document.write(arr2.join("-"));
+    document.write("<hr/>");
+    //push:向数组末尾添加数组，返回一个新的长度
+    var arr3 = new Array(3);
+    arr3 [0] = "ada";
+    arr3 [1] = "bda";
+    arr3 [2] = "cfa";
+    document.write("new lengrh="+arr3.push("wqe"));
+    document.write("<hr/>");
+    //pop: 删除最后一个元素，并返回删除的那个元素
+    var arr4 = ["liuzi","shikang","zhengc","jiangp"];
+    document.write(arr4.pop());
+    document.write("<hr/>");
+    //reverse:颠倒元素顺序
+    document.write(arr4.reverse());
+</script>
+</body>
+</html>

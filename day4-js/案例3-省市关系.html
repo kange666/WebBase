@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select id="country" onchange="add1(this.value)">
+    <option value="0">--请选择--</option>
+    <option value="中国">中国</option>
+    <option value="云南">云南</option>
+    <option value="美国">美国</option>
+    <option value="日本">日本</option>
+
+</select>
+<select id="city">
+
+</select>
+<script type="text/javascript">
+        //创建二维数组储存数据
+    var arr = new Array(4);
+    arr[0] = ["中国","北京","上海","广州","深圳"];
+    arr[1] = ["云南","昆明","大理","玉溪","曲靖"];
+    arr[2] = ["美国","纽约","华盛顿","芝加哥","硅谷"];
+    arr[3] = ["日本","东京","江户川","大阪","北海道"];
+      //  document.write(arr[0]);
+    function add1(val){
+       // alert(val);
+        //由于每次都要向option里添加数组，所以会重复
+        //在每次添加前判断是否有option，有则删除
+
+        //获取city的select
+       var city1 = document.getElementById("city");
+        //得到city的option
+        var options1 = city1.getElementsByTagName("option");
+        //遍历数组
+        for(m=0;m<options1.length;m++){
+            //得到每一个option
+            var op = options1[m];
+            //通过父节点删除option
+            city1.removeChild(op);
+            m--;
+        }
+
+        //遍历数组
+        for(var i=0;i<arr.length;i++){
+            //得到二维数组里面的每一个数组
+            var arr1 = arr[i];
+            //得到数组的第一个值
+            var firstvalue = arr1[0];
+            //判断第一个值是否相同
+            if(firstvalue == val){
+                //得到第一个值后面的元素，遍历arr
+                for(var j=1;j<arr1.length;j++){
+                    var val1 = arr1[j];//得到城市名称
+                    //alert(val1);}}}}
+                   //创option
+                    var option1 = document.createElement("option");
+                   //创建文本
+                   var text1 = document.createTextNode(val1);
+                    //把文本放到option里
+                   option1.appendChild(text1);
+                    //添加值到city里
+                    city1.appendChild(option1);
+                }
+           }
+        }
+    }
+</script>
+
+</body>
+</html>

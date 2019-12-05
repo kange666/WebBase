@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="open" onclick="open()"/>
+<!--window窗口对象-->
+<script type="text/javascript">
+//confirm确认框
+    //window.confirm("是否删除");
+    var flag = window.confirm("是否删除");
+    //alert(flag);
+    if(flag==true){
+        alert("删除成功");
+    }else {
+        alert("删除失败");
+    }
+    //prompt输入框
+    window.prompt("显示的内容","输入框里的缺省");
+    //open打开一个新窗口
+    function open(){
+        window.open("hello.html","","width=200,height=200");
+    }
+    //close关闭窗口
+    //定时器：
+    // setInterval("ja代码","毫秒数");
+    window.setInterval("alert('123'),3000");
+    //setTimeout在毫秒后执行，只会执行一次
+    window,setTimeout("alert('abd'),3000");
+    //clearInterval(id);
+    //clearTimeout(id);
+</script>
+</body>
+</html>

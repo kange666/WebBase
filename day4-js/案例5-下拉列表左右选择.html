@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1" style="float:left;">
+    <div>
+        <!--显示全部下拉选择框：multiple="multiple"-->
+        <select id="s1" multiple="multiple" style=" width: 100px;height: 200px">
+            <option>AAAA</option>
+            <option>BBBB</option>
+            <option>CCCC</option>
+            <option>DDDD</option>
+            <option>EEEE</option>
+        </select>
+    </div>
+    <div>
+       <input type="button" value="选中添加到右边" onclick="SelIntoRight();"><br/>
+        <input type="button" value="全部添加到右边" onclick="AllIntoRight();">
+    </div>
+
+</div>
+<div id="div2">
+    <div>
+        <select id="s2" multiple="multiple" style="width: 100px;height: 200px">
+            <option>FFFF</option>
+        </select>
+    </div>
+    <div>
+        <input type="button" value="选中添加到左边" onclick="SelIntoLeft();"><br/>
+        <input type="button" value="全部添加到左边" onclick="AllIntoLeft();">
+    </div>
+
+</div>
+<script type="text/javascript">
+   // 选中添加到右边
+    function SelIntoRight(){
+        //获得s1里的option
+        var s1 = document.getElementById("s1");
+        var op = document.getElementsByTagName("option");
+        //获得s2
+        var s2 = document.getElementById("s2");
+        //遍历option
+        for(var i=0;i<op.length;i++) {
+           // alert(i);
+            var ops = op[i];
+            //判断是否被选中selected=true
+            if (ops.selected == true){
+                s2.appendChild(ops);
+                i--;
+
+            }
+        }
+    }
+//全部添加到右边
+    function AllIntoRight(){
+        var s1 = document.getElementById("s1");
+        var s2 = document.getElementById("s2");
+        var op = document.getElementsByTagName("option");
+        for(var j = 0;j<op.length;j++){
+            var ops = op[j];
+            s2.appendChild(ops);
+            j--;
+        }
+    }
+</script>
+</body>
+</html>

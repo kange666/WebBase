@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" name="name" id="uid" value="123">
+<ul id="id">
+    <li>aaaa</li>
+    <li>bbbb</li>
+    <li>cccc</li>
+</ul>
+<script type="text/javascript">
+    //获取属性里面的值
+    var input = document.getElementById("uid");
+    alert(input.value);
+    alert(input.getAttribute("value"));
+    //设置属性的值
+    input.setAttribute("value","234");
+    alert(input.value);
+    //删除属性，不能删除value
+    input.removeAttribute("name");
+    //获得标签下面的子标签
+    var ul = document.getElementById("id");
+    var li = ul.getElementsByTagName("li");
+    alert(li.length);
+</script>
+</body>
+</html>

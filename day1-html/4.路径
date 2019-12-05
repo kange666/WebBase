@@ -1,0 +1,12 @@
+有两种路径：
+1.绝对路径：
+D:\webstorm\space\day1
+www.baidu.com
+
+2.相对路径：
+（1）html文件与图片在同一目录,直接写文件名
+img src="d2.jpg"
+（2）图片在html文件下层目录
+<img src="code/d1.jpg">
+（3）图片在html上层目录
+../code/d1.jpg

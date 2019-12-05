@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="uid">
+    <li>1111</li>
+    <li>2222</li>
+    <li>3333</li>
+    <li>4444</li>
+</ul><br/>
+<input type="button" value="add"  onclick="add1()">
+<script type="text/javascript">
+    //在末尾添加节点
+    function add1(){
+        //得到ul标签
+        var ul = document.getElementById("uid");
+        //创建标签
+        var li = document.createElement("li");
+        //创建文本
+        var text = document.createTextNode("5555");
+        //把文本加到li下面
+        li.appendChild(text);
+        //把li添加到ul
+        ul.appendChild(li);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="id" value="aaaa"/>
+<input type="text" name="name1" value="aaaa"/><br/>
+<input type="text" name="name1" value="bbbb"/><br/>
+<input type="text" name="name1" value="cccc"/><br/>
+
+<!--dom:document object model 文档对象模型-->
+<!--文档：超文本标记文档html xml-->
+<!--使用js里的dom对象对标记型文档进行操作-->
+<script type="text/javascript">
+     //write
+    document.write("aaa");
+     //getElementById();通过id来得到一个元素（标签），返回一个对象
+     //getElementById()得到input标签
+    var input1 = document.getElementById("id");
+     //获得input里的value值
+    alert(input1.value);
+    //向input里赋值
+    input1.value = "bbbb";
+    //getElementsByName():通过标签的name属性来得到标签，得到一个集合（数组）
+    var input2 = document.getElementsByName("name1");
+    //只有一个标签，用数组下标来得到  var input2 = document.getElementsByName("name1")[0];
+    //alert(input2.length);
+    //遍历数组
+    for(i=0;i<=input2.length;i++){
+        var input = input2[i];//每次循环得到input2的值，传到input里
+        alert(input.value);//得到每个input里的value值
+    }
+    //演示getElementsByTagName:通过标签名称得到元素
+    var input3 = document.getElementsByTagName("input");
+    alert(input3.length);
+</script>
+</body>
+</html>

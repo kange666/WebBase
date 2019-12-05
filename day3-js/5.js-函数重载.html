@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    //js中不存在重载，但是可以模拟：arguments
+    function add1() {
+        if (arguments.length == 2) {
+            return arguments[0] + arguments[1];
+        } else if (arguments.length == 3) {
+            return arguments[0] + arguments[1] + arguments[2];
+        } else if (arguments.length == 4) {
+            return arguments[0] + arguments[1] + arguments[2] + arguments[3];
+        } else {
+            return 0;
+        }
+    }
+        alert(add1(1,2));
+        alert(add1(1,2,3));
+        alert(add1(1,2,3,4));
+        alert(add1(1,2,3,4,5));
+
+</script>
+</body>
+</html>

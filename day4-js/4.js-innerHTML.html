@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+    #div1 {
+    width :200px;
+    height :200px;
+    border : 2px dashed red;
+    }
+</style>
+</head>
+
+<body>
+<span id="sp">的杰拉德</span>
+<div id="div1">
+
+</div>
+<script type="text/javascript">
+    //获取标签里的文本内容
+    var sp = document.getElementById("sp");
+    alert(sp.innerHTML);
+    //设置标签里的内容
+    var div = document.getElementById("div1");
+   // div.innerHTML = "<h1>AAAA</h1>"
+    var tab = "<table border = '1'><tr><td>AAAA</td></tr><tr><td>BBBB</td></tr><tr><td>CCCC</td></tr></table>";
+    div.innerHTML = tab;
+  //  var tab = "<table>"
+  //  tab += "</table>";
+</script>
+</body>
+</html>

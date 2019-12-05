@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="hello.html " method="post"><br>
+    文本：<input type="text" name="name"/><br>
+    密码：<input type="password" name="pwd"/><br>
+    <!-- 默认选中：checked="checked"-->
+    单选框<input type="radio" name="sex" value="man"/>man <input type="radio" name="sex" value="woman/">woman<br>
+    复选框<input type="checkbox" name="love" value="ymq"/> 羽毛球<input type="checkbox" name="love" value="ppq"/> 乒乓球<input type="checkbox" name="love" value="wq"/>网球<br>
+    文件<input type="file"/><br>
+    <!-- 下拉默认选中：selected="selected"-->
+    选择框<select name="brith">
+        <option value="0">请选择</option>
+        <option value="1991">1991</option>
+        <option value="1992">1992</option>
+        <option value="1993">1993</option>
+    </select><br>
+    文本域<textarea name="text"  cols="30" rows="10"></textarea><br>
+    隐藏项<input type="hidden"/><br>
+    提交<input type="submit" value="提交"/><br>
+    图片提交: <input type="image" src="code/d1.jpg"/> >
+    重置： <input type="reset" value="重置"/>
+    普通按钮： <input type="button" value=""/>
+</form>
+</body>
+</html>

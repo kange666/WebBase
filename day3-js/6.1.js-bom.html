@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--事件设置-->
+<input type="button" value="herf" onclick="href1()">
+<input type="button" value="back" onclick="back()">
+<input type="button" value="next" onclick="next()">
+<hr/>
+<!--bom:broswer object model   浏览器对象模型-->
+<script type="text/javascript">
+    //history:
+    //到上一个界面
+    function back(){
+        history.back();
+//        history.go(-1);
+    }
+    //到下一个界面
+    function  next(){
+        history.forward();
+        history.go(1);
+    }
+    //href
+    function href1(){
+        alert("aaaa");
+        location.href = "hello.html";
+    }
+    //navigator:获取客户机信息（流浪器）
+    document.write(navigator.appName);
+    document.write("<hr/>");
+    //screen:获取屏幕信息
+    document.write(screen.width);
+    document.write("<hr/>");
+    document.write(screen.height);
+    //location:获取请求的url地址
+    document.write("<hr/>");
+    document.write(location.href);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="times">
+
+</div>
+<script type="text/javascript">
+    function D1(){
+        //获得时间
+        var date = new Date();
+        //格式化
+        var d1 = date.toLocaleString();
+        //获得div
+        var div = document.getElementById("times");
+        div.innerHTML = d1;
+    }
+    //每一秒先试一次
+    setInterval("D1();", 1000);
+</script>
+</body>
+</html>

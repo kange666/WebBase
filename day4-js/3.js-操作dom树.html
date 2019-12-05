@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style type="text/css">
+    #div1{
+        width: 200px;
+        height: 300px;
+        border: 2px solid red;
+    }
+    #div2{
+        width: 300px;
+        height: 300px;
+        border:3px dashed blue;
+    }
+
+</style>
+<body>
+<div id="div1">
+    <ul id="ul1">
+        <li id="li1">aaaa</li>
+        <li id="li2">bbbb</li>
+        <li id="li3">cccc</li>
+    </ul>
+</div>
+<div id="div2">
+
+</div>
+<input type="button" id="input" value="添加" onclick="add()">
+<input type="button" id="insert" value="插入" onclick="insert()">
+<script type="text/javascript">
+    function add(){
+        //得到div2
+        var div2 = document.getElementById("div2");
+        //得到ul
+        var ul = document.getElementById("ul1");
+        //吧ul添加到div2里,appendChild()类似于剪切
+        div2.appendChild(ul);
+
+    }
+    //在某个节点之前加入一个新节点
+    //
+    function insert(){
+        //1.获得li2
+        var li2 = document.getElementById("li2");
+        //创建li
+        var li = document.createElement("li");
+        //创建文本
+        var text = document.createTextNode("ffff");
+        //吧文本添加到li里
+        li.appendChild(text);
+        //获取ul
+        var ul = document.getElementById("ul1");
+        //添加
+        ul.insertBefore(li,li2);
+    }
+
+
+
+</script>
+</body>
+</html>

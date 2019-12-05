@@ -1,0 +1,19 @@
+1.表格标签
+<table></table>
+border:边框
+bordercolor:边框颜色
+cellspacing:单元格间隔
+width:
+height:
+
+2.在table里面 设置
+<tr>    <td>
+align：left center right
+<th>居中加粗
+
+<caption>表格名字
+
+3.合并单元格
+跨行：<td rowspan="跨行数">
+跨列：<td colspan="跨列数">
+

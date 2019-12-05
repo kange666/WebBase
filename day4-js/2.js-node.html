@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span id="spanid" >hahahha</span>
+<script type="text/javascript">
+    //获取标签对象
+    var span1 =  document.getElementById("spanid");
+    alert(span1.nodeType); //1
+    alert(span1.nodeName); //SPAN
+    alert(span1.nodeValue); //null
+
+    //获取属性
+    var id1 = span1.getAttributeNode("id");
+    alert(id1.nodeType); //2
+    alert(id1.nodeName); //ID
+    alert(id1.nodeValue); //spanid
+
+    //获取文本
+    var text1 = span1.firstChild;
+    alert(text1.nodeType); //3
+    alert(text1.nodeName); //#text
+    alert(text1.nodeValue); //hahahha
+
+    /*
+    父节点：ul是li的父节点
+           parentNode;
+    子节点：childNode:得到所有子节点
+           firstChild:得到第一个子节点
+           lastChild:得到最后一个子节点
+    同辈节点：nextSibling:获得下一个兄弟节点
+            previousSibling：上一个
+
+
+     */
+
+</script>
+</body>
+</html>
